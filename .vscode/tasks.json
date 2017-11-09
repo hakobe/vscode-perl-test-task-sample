@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "run Perl test all",
+            "type": "shell",
+            "command": "carton exec -- prove -v ${relativeFile}",
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "run Perl test here",
+            "type": "shell",
+            "command": "carton exec -- perl .vscode/exec/run_test_at.pl ${relativeFile} ${lineNumber}",
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        }
+    ]
+}
